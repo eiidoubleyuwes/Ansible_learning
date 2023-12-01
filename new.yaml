@@ -1,0 +1,11 @@
+---
+
+-name: LearningAnsible
+ hosts: centos
+ tasks:
+  -name: ensure
+   apt:
+    name: man
+
+    state: latest 
+
