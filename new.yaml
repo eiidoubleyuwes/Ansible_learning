@@ -3,7 +3,7 @@
 -name: LearningAnsible
  hosts: centos
  tasks:
-  -name: ensure
+  -name: ensure man is updated 
    apt:
     name: man
 
