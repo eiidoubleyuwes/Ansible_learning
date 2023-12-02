@@ -1,0 +1,14 @@
+#create EC2 using ansible
+---
+- name: start an instance with a public IP address
+  amazon.aws.ec2_instance:
+    name: "Ansible instance"
+    key_name: "Dev-key"
+    vpc_subnet_id: subnet-4bhhjs
+    instance_type: t2-micro
+    security_group: default
+    network:
+      assign_public_ip: true
+    image_id: ami-123456
+    tags:
+      Environment: Testing
