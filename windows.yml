@@ -1,0 +1,10 @@
+---
+-name: Add a windows user
+  hosts: winz
+  gather_facts: false
+  tasks:
+    - name: Add User
+      win_user:
+        name: baraka
+        password: "XXXXXX"
+        state: present
